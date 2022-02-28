@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(45deg, rgb(59,50,50), rgb(22,28,29));
+    background: linear-gradient(45deg, rgb(104, 0, 0), rgb(250, 6, 6));
     color: #333;
 }
 
@@ -17,9 +17,9 @@ h1 {
 }
 
 .recherche-poke {
-    max-width: 700px;
+    /* max-width: 700px; */
     width: 70%;
-    min-width: 450px;
+    min-width: 250px;
     margin:30px auto ;
     position: relative;
     display: flex;
@@ -80,11 +80,13 @@ ul{
     width: 250px;
     height: auto;
     padding: 15px;
-    margin: 5px;
+    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border-radius: 10%;
+    box-shadow: 10px 10px 7px black;
 }
 
 .list-poke h5 {
@@ -133,17 +135,8 @@ ul{
 
 @media screen and (min-width : 320px) {
     
-    .box{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
     .recherche-poke {
-        max-width: 700px;
         width: 100%;
-        min-width: 450px;
         margin:30px auto ;
         position: relative;
         display: flex;
@@ -152,7 +145,7 @@ ul{
     }
     
     .recherche-poke input {
-        width: 50%;
+        width: 60%;
         padding: 15px;
         border: none;
         outline: none;

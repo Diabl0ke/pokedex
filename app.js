@@ -8,7 +8,7 @@ const types = {
     grass: '#78c850',
     ground: '#E2BF65',
     dragon: '#6F35FC',
-    fire: '#F58271',
+    fire: '#F75231',
     electric: '#F7D02C',
     fairy: '#D685AD',
     poison: '#966DA3',
@@ -20,13 +20,15 @@ const types = {
     fighting: '#C25956',
     rock: '#B6A136',
     ghost: '#735797',
-    ice: '#96D9D6'
+    ice: '#96D9D6',
+    dark : '#735A4A',
+    steel :'#ADADC6'
 };
 
 
 function fetchPokemonBase() {
 
-    fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
+    fetch("https://pokeapi.co/api/v2/pokemon?limit=250")
         .then(reponse => reponse.json())
         .then((allPoke) => {
             // console.log(allPoke);
@@ -63,7 +65,7 @@ function fetchPokemonComplet(pokemon) {
                     objPokemonFull.name = pokeData.names[4].name;
                     allPokemon.push(objPokemonFull);
 
-                    if (allPokemon.length === 151) {
+                    if (allPokemon.length === 250) {
                         // console.log(allPokemon);
 
                         tableauFin = allPokemon.sort((a, b) => {
@@ -125,7 +127,7 @@ window.addEventListener('scroll', () => {
 let index = 21;
 
 function addPoke(nb) {
-    if (index > 151) {
+    if (index > 250) {
         return;
     }
     const arrToAdd = allPokemon.slice(index, index + nb);
@@ -146,7 +148,7 @@ searchInput.addEventListener('keyup', recherche);
 
 function recherche() {
 
-    if (index < 151) {
+    if (index < 250) {
         addPoke(130);
     }
 
