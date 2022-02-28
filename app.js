@@ -116,7 +116,7 @@ window.addEventListener('scroll', () => {
     // scrollHeight = scroll total
     // clientHeight = hauteur de la fenêtre, partie visible.
 
-    if(clientHeight + scrollTop >= scrollHeight - 20) {
+    if(clientHeight + scrollTop >= scrollHeight - 100) {
         addPoke(6);
     }
 
