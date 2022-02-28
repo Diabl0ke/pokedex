@@ -124,7 +124,7 @@ window.addEventListener('scroll', () => {
 
 })
 
-let index = 21;
+// let index = 21;
 
 function addPoke(nb) {
     if (index > 250) {
